@@ -26,6 +26,6 @@
 
 #import "MFPButton.h"
 
-@interface BlahButton : UIButton
+@interface BlahButton : MFPButton<MFPButtonProtocol>
 
 @end
