@@ -28,7 +28,7 @@
 
 @implementation MFPButton
 static NSString *cachesDirectory = nil;
-static BOOL cachingEnabled = YES;
+static BOOL cachingEnabled = NO;
 
 #pragma mark - Class Methods
 + (void) load {
