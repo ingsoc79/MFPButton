@@ -139,7 +139,7 @@ static BOOL cachingEnabled = YES;
 		}
 	} else {
 		newImage = [[self generateImageForState:state size:imgSize scale:scale] retain];
-		if(overwriteCache) {
+		if(cachingEnabled) {
 			[UIImagePNGRepresentation(newImage) writeToFile:cachedImgPath atomically:YES];
 		}
 	}
