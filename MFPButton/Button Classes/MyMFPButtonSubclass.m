@@ -1,5 +1,5 @@
 //
-//  BlahButton.m
+//  MyMFPButtonSubclass.m
 //  MFPButton
 //
 //  The MIT License (MIT)
@@ -24,9 +24,9 @@
 //  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import "BlahButton.h"
+#import "MyMFPButtonSubclass.h"
 
-@implementation BlahButton
+@implementation MyMFPButtonSubclass
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
 	self = [super initWithCoder:aDecoder];

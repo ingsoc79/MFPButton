@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		014E67D517B1A01C009155FA /* MFPGradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 014E67D417B1A01C009155FA /* MFPGradientButton.m */; };
-		014E67D917B1A2DB009155FA /* BlahButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 014E67D817B1A2DB009155FA /* BlahButton.m */; };
 		01725FA01819E9BB006B6710 /* MFPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 01725F9F1819E9BB006B6710 /* MFPButton.m */; };
+		01725FA3181A0F90006B6710 /* MyMFPButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 01725FA2181A0F90006B6710 /* MyMFPButtonSubclass.m */; };
 		01C115AC17B1999D00EA09F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C115AB17B1999D00EA09F2 /* UIKit.framework */; };
 		01C115AE17B1999D00EA09F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C115AD17B1999D00EA09F2 /* Foundation.framework */; };
 		01C115B017B1999D00EA09F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C115AF17B1999D00EA09F2 /* CoreGraphics.framework */; };
@@ -43,10 +43,10 @@
 /* Begin PBXFileReference section */
 		014E67D317B1A01C009155FA /* MFPGradientButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPGradientButton.h; sourceTree = "<group>"; };
 		014E67D417B1A01C009155FA /* MFPGradientButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPGradientButton.m; sourceTree = "<group>"; };
-		014E67D717B1A2DB009155FA /* BlahButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlahButton.h; sourceTree = "<group>"; };
-		014E67D817B1A2DB009155FA /* BlahButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlahButton.m; sourceTree = "<group>"; };
 		01725F9E1819E9BB006B6710 /* MFPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPButton.h; sourceTree = "<group>"; };
 		01725F9F1819E9BB006B6710 /* MFPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPButton.m; sourceTree = "<group>"; };
+		01725FA1181A0F90006B6710 /* MyMFPButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMFPButtonSubclass.h; sourceTree = "<group>"; };
+		01725FA2181A0F90006B6710 /* MyMFPButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMFPButtonSubclass.m; sourceTree = "<group>"; };
 		01C115A817B1999D00EA09F2 /* MFPButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFPButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C115AB17B1999D00EA09F2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		01C115AD17B1999D00EA09F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -193,8 +193,8 @@
 				014E67D417B1A01C009155FA /* MFPGradientButton.m */,
 				01C115FA17B199E300EA09F2 /* MFPSecondaryButton.h */,
 				01C115FB17B199E300EA09F2 /* MFPSecondaryButton.m */,
-				014E67D717B1A2DB009155FA /* BlahButton.h */,
-				014E67D817B1A2DB009155FA /* BlahButton.m */,
+				01725FA1181A0F90006B6710 /* MyMFPButtonSubclass.h */,
+				01725FA2181A0F90006B6710 /* MyMFPButtonSubclass.m */,
 			);
 			path = "Button Classes";
 			sourceTree = "<group>";
@@ -313,10 +313,10 @@
 				01C115B817B1999D00EA09F2 /* main.m in Sources */,
 				01725FA01819E9BB006B6710 /* MFPButton.m in Sources */,
 				01C115BC17B1999D00EA09F2 /* AppDelegate.m in Sources */,
+				01725FA3181A0F90006B6710 /* MyMFPButtonSubclass.m in Sources */,
 				01C115C517B1999D00EA09F2 /* ViewController.m in Sources */,
 				014E67D517B1A01C009155FA /* MFPGradientButton.m in Sources */,
 				01C1160617B199E300EA09F2 /* MFPSecondaryButton.m in Sources */,
-				014E67D917B1A2DB009155FA /* BlahButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

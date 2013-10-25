@@ -1,5 +1,5 @@
 //
-//  BlahButton.h
+//  MyMFPButtonSubclass.h
 //  MFPButton
 //
 //  The MIT License (MIT)
@@ -26,6 +26,6 @@
 
 #import "MFPButton.h"
 
-@interface BlahButton : MFPButton<MFPButtonProtocol>
+@interface MyMFPButtonSubclass : MFPButton<MFPButtonProtocol>
 
 @end
