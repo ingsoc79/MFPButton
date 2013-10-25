@@ -34,7 +34,6 @@ static BOOL cachingEnabled = NO;
 + (void) load {
 
 	//get a handle on the user's cache directory, falling back to their temporary directory if not found
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	NSArray *pathList = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
 	BOOL cacheDirOK = YES;
 	cachesDirectory = nil;
@@ -43,10 +42,8 @@ static BOOL cachingEnabled = NO;
 		cacheDirOK = [[NSFileManager defaultManager] createDirectoryAtPath:cachesDirectory withIntermediateDirectories:YES attributes:nil error:NULL];
 	}
 	if(!cacheDirOK) {
-		[cachesDirectory release];
-		cachesDirectory = [NSTemporaryDirectory() retain];
+		cachesDirectory = NSTemporaryDirectory();
 	}
-	[pool drain];
 }
 #pragma mark - Caching Methods
 + (BOOL) cachingEnabled {
@@ -121,7 +118,7 @@ static BOOL cachingEnabled = NO;
 	if(cgImg) {
 		UIImage *newImage = [[UIImage alloc] initWithCGImage:cgImg];
 		CGImageRelease(cgImg);
-		return [newImage autorelease];
+		return newImage;
 	}
 	return nil;
 }
@@ -134,11 +131,11 @@ static BOOL cachingEnabled = NO;
 	if(cachingEnabled && !overwriteCache) {
 		newImage = [[UIImage alloc] initWithContentsOfFile:cachedImgPath];
 		if(newImage == nil) { //generate the image if not cached
-			newImage = [[self generateImageForState:state size:imgSize scale:scale] retain];
+			newImage = [self generateImageForState:state size:imgSize scale:scale];
 			[UIImagePNGRepresentation(newImage) writeToFile:cachedImgPath atomically:YES];
 		}
 	} else {
-		newImage = [[self generateImageForState:state size:imgSize scale:scale] retain];
+		newImage = [self generateImageForState:state size:imgSize scale:scale];
 		if(cachingEnabled) {
 			[UIImagePNGRepresentation(newImage) writeToFile:cachedImgPath atomically:YES];
 		}
@@ -146,8 +143,6 @@ static BOOL cachingEnabled = NO;
 
 	//set the background image of this button
 	[self setBackgroundImage:newImage forState:state];
-	[newImage release];
-	[cachedImgPath release];
 }
 
 /*use drawForState:context: to draw the background image(s) of the button.

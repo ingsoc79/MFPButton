@@ -41,7 +41,6 @@
 	MFPSecondaryButton *codeButton = [[MFPSecondaryButton alloc] initWithFrame:CGRectMake(20.0f, 50.0f, 120.0f, 60.0f)];
 	[codeButton setTitle:@"Code Button" forState:UIControlStateNormal];
 	[self.view addSubview:codeButton];
-	[codeButton release];
 }
 - (void)didReceiveMemoryWarning
 {
